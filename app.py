@@ -4,7 +4,7 @@ import sys
 from flask import Flask, request
 from config import Config
 
-sys.path.append("/home/lighthouse/flaskproject2")
+sys.path.append("/home/lighthouse/flaskProject2/")
 
 from . import views
 # from views.city import city
