@@ -50,13 +50,13 @@ def create():
         uid = verify_auth_token(token)['id'] #从token中解析用户id
         time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S');#格式化当前时间
         share = Share(title = title,text = text,uid = uid,time = time)
-        try:
-            db.session.add(share)
-            db.session.commit()
-            return {'tips': '添加成功！'}, 200
+        # try:
+        db.session.add(share)
+        db.session.commit()
+        return {'tips': '添加成功！'}, 200
 
-        except Exception as e:
-            return {'tips': '抱歉后台出了一点小错误'}, 201
+        # except Exception as e:
+        #     return {'tips': '抱歉后台出了一点小错误'}, 201
     else:
         return {'tips': '请先登录'}, 401
 
