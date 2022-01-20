@@ -19,7 +19,7 @@ itsdangerous==1.1.0
 Jinja2==2.11.0
 jmespath==0.10.0
 MarkupSafe==1.1.1
-numpy==1.19.5
+numpy==1.16.6
 oss2==2.12.1
 pycparser==2.21
 pycryptodome==3.9.9
