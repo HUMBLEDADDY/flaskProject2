@@ -88,8 +88,13 @@ def initData():
                  city = City(name=name, nowCon=nowCon, con=con, heal=heal, dead=dead)
                  province.citys.append(city)
             #print(citys)
-        db.session.add(province)
-        db.session.commit()
+        try:
+            db.session.add(province)
+            db.session.commit()
+        except Exception as e:
+            print(e)
+            pydb.rollback()
+
 
 
 
