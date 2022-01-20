@@ -14,50 +14,50 @@ from models.province import Province
 #用pymysql实现省表和市表的截断
 import pymysql
 # pydb = pymysql.connect(host="localhost", user="root", passwd="0101czx724715", db = "epidemic", charset='utf8')
-pydb = pymysql.connect(host="localhost", user="debian-sys-maint", passwd="5Dvjr3MiDzszFpY3", db = "epidemic", charset='utf8')
+pydb = pymysql.connect(host="localhost", user="root", passwd="0101czx7215", db = "epidemic")
 
 
 def initData():
-    cursor = pydb.cursor()
+    # cursor = pydb.cursor()
+    #
+    # #截断市表（全部删除）
+    # sql = "TRUNCATE TABLE citys"
+    # try:
+    #     result = cursor.execute(sql)
+    #     print(result)
+    #     pydb.commit()
+    #     print('删除成功')
+    # except Exception as e:
+    #     print(e)
+    #     pydb.rollback()
+    #
+    # #取消外键的约束
+    # sql = "SET foreign_key_checks = 0"
+    # try:
+    #     result = cursor.execute(sql)
+    #     pydb.commit()
+    # except Exception as e:
+    #     print(e)
+    #     pydb.rollback()
+    #
+    # #截断省表（全部删除）
+    # sql = "TRUNCATE TABLE provinces"
+    # try:
+    #     result = cursor.execute(sql)
+    #     pydb.commit()
+    #     print('删除成功')
+    # except Exception as e:
+    #     print(e)
+    #     pydb.rollback()
 
-    #截断市表（全部删除）
-    sql = "TRUNCATE TABLE citys"
-    try:
-        result = cursor.execute(sql)
-        print(result)
-        pydb.commit()
-        print('删除成功')
-    except Exception as e:
-        print(e)
-        pydb.rollback()
-
-    #取消外键的约束
-    sql = "SET foreign_key_checks = 0"
-    try:
-        result = cursor.execute(sql)
-        pydb.commit()
-    except Exception as e:
-        print(e)
-        pydb.rollback()
-
-    #截断省表（全部删除）
-    sql = "TRUNCATE TABLE provinces"
-    try:
-        result = cursor.execute(sql)
-        pydb.commit()
-        print('删除成功')
-    except Exception as e:
-        print(e)
-        pydb.rollback()
-
-    #恢复外键的约束
-    sql = "SET foreign_key_checks = 1"
-    try:
-        result = cursor.execute(sql)
-        pydb.commit()
-    except Exception as e:
-        print(e)
-        pydb.rollback()
+    # #恢复外键的约束
+    # sql = "SET foreign_key_checks = 1"
+    # try:
+    #     result = cursor.execute(sql)
+    #     pydb.commit()
+    # except Exception as e:
+    #     print(e)
+    #     pydb.rollback()
 
     #获取json
     url = 'https://view.inews.qq.com/g2/getOnsInfo?name=disease_h5&callback=&_=%d' % int(time.time() * 1000)
