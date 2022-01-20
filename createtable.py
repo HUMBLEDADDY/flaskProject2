@@ -13,7 +13,7 @@ from models.province import Province
 
 #用pymysql实现省表和市表的截断
 import pymysql
-pydb = pymysql.connect(host="localhost", user="debian-sys-maint", passwd="5Dvjr3MiDzszFpY3", db = "epidemic", charset='utf8')
+pydb = pymysql.connect(host="localhost", user="root", passwd="0101czx724715", db = "epidemic", charset='utf8')
 
 def initData():
     cursor = pydb.cursor()
@@ -66,6 +66,7 @@ def initData():
     china_data = data['areaTree'][0]['children']
     for cd in china_data:
         name = cd['name']
+        print(name)
         nowCon = cd['total']['nowConfirm']
         con = cd['total']['confirm']
         heal = cd['total']['heal']
@@ -88,13 +89,8 @@ def initData():
                  city = City(name=name, nowCon=nowCon, con=con, heal=heal, dead=dead)
                  province.citys.append(city)
             #print(citys)
-        try:
-            db.session.add(province)
-            db.session.commit()
-        except Exception as e:
-            print(e)
-            pydb.rollback()
-
+        db.session.add(province)
+        db.session.commit()
 
 
 
