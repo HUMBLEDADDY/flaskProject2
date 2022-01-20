@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from db import db
+from ..db import db
 
 
 class City(db.Model):

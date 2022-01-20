@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 from flask import Blueprint,render_template,request
-from models.user import User
-from db import db
-from checkToken import verify_auth_token
+from ..models.user import User
+from ..db import db
+from ..checkToken import verify_auth_token
 
 user=Blueprint('user',__name__,template_folder='../templates/user')
 
