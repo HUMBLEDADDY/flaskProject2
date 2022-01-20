@@ -37,7 +37,7 @@ def initData():
         print(e)
         pydb.rollback()
 
-    #截断市表（全部删除）
+    #截断省表（全部删除）
     sql = "TRUNCATE TABLE provinces"
     try:
         result = cursor.execute(sql)
