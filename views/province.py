@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+
 from flask import Blueprint,render_template,request,jsonify
 from models.province import Province
 from checkToken import verify_auth_token
