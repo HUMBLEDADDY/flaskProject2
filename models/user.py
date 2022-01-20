@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-from ..db import db
+from db import db
 from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
-from ..config import SECRET_KEY
+from config import SECRET_KEY
 
 class User(db.Model):
     __tablename__ = "users"

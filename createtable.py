@@ -6,10 +6,10 @@ createtable.py用于从接口获取数据并将其存放至数据库
 import time
 import json
 import requests
-from .app import app
-from .db import db
-from .models.city import City
-from .models.province import Province
+from app import app
+from db import db
+from models.city import City
+from models.province import Province
 
 #用pymysql实现省表和市表的截断
 import pymysql

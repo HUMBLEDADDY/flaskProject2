@@ -2,11 +2,11 @@
 from flask import Flask, request
 from config import Config
 
-from .views.city import city
-from .views.discuss import discuss
-from .views.province import province
-from .views.share import share
-from .views.user import user
+from views.city import city
+from views.discuss import discuss
+from views.province import province
+from views.share import share
+from views.user import user
 
 from db import db
 from flask_cors import CORS
