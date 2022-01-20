@@ -13,7 +13,9 @@ from models.province import Province
 
 #用pymysql实现省表和市表的截断
 import pymysql
-pydb = pymysql.connect(host="localhost", user="root", passwd="0101czx724715", db = "epidemic", charset='utf8')
+# pydb = pymysql.connect(host="localhost", user="root", passwd="0101czx724715", db = "epidemic", charset='utf8')
+pydb = pymysql.connect(host="localhost", user="debian-sys-maint", passwd="5Dvjr3MiDzszFpY3", db = "epidemic", charset='utf8')
+
 
 def initData():
     cursor = pydb.cursor()
