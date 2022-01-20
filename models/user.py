@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from db import db
 from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
 from config import SECRET_KEY

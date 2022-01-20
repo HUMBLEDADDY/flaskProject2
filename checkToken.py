@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 '''
 checkToken.py
 用于校验token

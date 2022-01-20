@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 '''
 createtable.py用于从接口获取数据并将其存放至数据库
 '''

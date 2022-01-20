@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from flask import Blueprint,render_template, jsonify,request
 from models.share import Share
 from checkToken import verify_auth_token

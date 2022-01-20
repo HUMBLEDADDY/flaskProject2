@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from flask import Blueprint,render_template,request
 from models.user import User
 from db import db

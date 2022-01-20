@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from models.discuss import Discuss
 from flask import Blueprint,render_template,request,jsonify
 from flask_httpauth import HTTPBasicAuth #用于生成token

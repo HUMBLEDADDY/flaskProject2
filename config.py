@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 #配置类
 class Config(object):
     SQLALCHEMY_DATABASE_URI = "mysql+pymysql://root:0101czx724715@127.0.0.1:3306/epidemic"
