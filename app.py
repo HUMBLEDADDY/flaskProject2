@@ -42,4 +42,4 @@ if __name__ == '__main__':
     #更新疫情数据，在这里import是因为更新数据需要数据库的连接，所以要在db.init_app(app)之后
     from createtable import initData
     initData()
-    app.run()
+    app.run(host="0.0.0.0",port = 5000)
